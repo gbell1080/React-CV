@@ -1,0 +1,10 @@
+.SideBarContainer {
+    margin: 5px;
+    padding: 5px;
+    width: 15vw;
+    height: 97.8vh;
+    background-color: #59C4FF;
+    font-size: 0.8em;
+    color: #F1F1F1;
+    border-radius: 7px;
+}
