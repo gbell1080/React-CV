@@ -1,0 +1,21 @@
+.InfoCard {
+    margin: 15px;
+    flex-grow: 4;
+    min-width: 680px;
+    max-width: 955px;
+    height: 45vh;
+    background-color: #AAE0FF;
+    display: block;
+    justify-content: center;
+}
+
+.InfoCard h2 {
+    font-size: 200%;
+    color: #479DCC;
+    text-align: center;
+}
+
+.InfoCard p {
+    text-align: center;
+    font-size: 140%;
+}

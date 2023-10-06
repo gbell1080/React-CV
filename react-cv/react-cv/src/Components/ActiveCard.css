@@ -1,0 +1,8 @@
+.ActiveCard {
+    margin: 15px;
+    height: 45vh;
+    min-width: 425px;
+    max-width: 570px;
+    flex-grow: 2;
+    background-color: #AAE0FF;
+}

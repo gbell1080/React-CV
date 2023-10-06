@@ -1,0 +1,24 @@
+.DashboardContainer {
+    margin: 5px;
+    padding-left: 0;
+    display: block;
+    flex-direction: row;
+    width: 83.3vw;
+    height: auto;
+    background-color: #FFFFFF;
+    box-shadow: inset;
+    border-radius: 7px;
+}
+
+.DashboardContainer h1 {
+    color: #59C4FF;
+    padding: 5px;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+
+.InfoCardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

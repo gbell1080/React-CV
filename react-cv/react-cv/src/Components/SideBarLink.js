@@ -5,6 +5,7 @@ function SideBarLink({ title }) {
         <div className='SideBarLinkContainer'>
             <h2 className='Title'>{title}</h2>
         </div>
+
     )
 }
 export default SideBarLink;

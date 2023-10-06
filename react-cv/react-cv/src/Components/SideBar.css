@@ -1,4 +1,5 @@
 .SideBarContainer {
+    align-items: center;
     margin: 5px;
     padding: 5px;
     width: 15vw;
@@ -7,4 +8,10 @@
     font-size: 0.8em;
     color: #F1F1F1;
     border-radius: 7px;
+}
+
+hr {
+    margin-top: 5px;
+    color: #479DCC;
+    border: solid 2px #479DCC;
 }
