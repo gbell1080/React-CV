@@ -1,12 +1,13 @@
 import './InfoCard.css';
 
-function InfoCard({ paragraph }) {
+function InfoCard({ paragraph, title, bullets }) {
+
     return (
         <div className='InfoCard'>
-            <h2>A bit about me</h2>
+            <h2>{title}</h2>
             <p>{paragraph}</p>
         </div>
-    )
+    );
 }
 
 export default InfoCard;

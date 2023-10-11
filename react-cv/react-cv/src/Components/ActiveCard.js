@@ -1,9 +1,9 @@
 import './ActiveCard.css';
 
-function ActiveCard() {
+function ActiveCard({ title }) {
     return (
         <div className='ActiveCard'>
-            <h2>A bit about me</h2>
+            <h2>{title}</h2>
         </div>
     )
 }

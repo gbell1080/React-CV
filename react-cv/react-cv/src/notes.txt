@@ -1,0 +1,1 @@
+I want to add a progress donut to the right of "a bit about me" - create this as a seperate component and add it to Activecard
