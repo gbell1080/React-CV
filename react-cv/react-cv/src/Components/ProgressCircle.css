@@ -1,0 +1,31 @@
+.ProgressCircleContainer {
+    background-color: #E5E5E5;
+    width: 180px;
+    height: 180px;
+    display: flex;
+}
+
+.Progresss {
+    background-color: #E5E5E5;
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    width: 7rem;
+    height: 7rem;
+}
+
+svg circle {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke: #56FF6A;
+    stroke-dashoffset: -31;
+    stroke-dasharray: 200;
+}

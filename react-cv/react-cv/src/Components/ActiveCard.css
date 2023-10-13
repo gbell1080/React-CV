@@ -5,6 +5,9 @@
     max-width: 570px;
     flex-grow: 2;
     background-color: #AAE0FF;
+    display: block;
+    align-items: center;
+    justify-content: center;
 }
 
 .ActiveCard h2 {

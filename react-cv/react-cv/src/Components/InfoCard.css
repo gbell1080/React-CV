@@ -17,5 +17,10 @@
 
 .InfoCard p {
     text-align: center;
-    font-size: 140%;
+    font-size: 1.5rem;
+}
+
+.InfoCard ul {
+    margin-left: 50px;
+    font-size: 1.5rem;
 }

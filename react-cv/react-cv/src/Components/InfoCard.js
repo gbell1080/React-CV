@@ -6,6 +6,7 @@ function InfoCard({ paragraph, title, bullets }) {
         <div className='InfoCard'>
             <h2>{title}</h2>
             <p>{paragraph}</p>
+            {bullets ? <ul>{bullets}</ul> : null}
         </div>
     );
 }
