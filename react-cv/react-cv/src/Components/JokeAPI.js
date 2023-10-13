@@ -1,50 +1,105 @@
+import React, { useState, useEffect } from 'react';
 import './JokeAPI.css';
-//for this section I used docs from the JokeAPI website, from the XMLHttpRequest docs linked on the Joke site
-//I also used chatGPT as I was having some issues, it added the onload function which I was missing
-//I now understand how it works and why it is needed
-var setup = '';
-var delivery = '';
-var joke = '';
 
 function JokeAPI() {
+    const [jokeState, setJokeState] = useState(null);
+    const [setupState, setSetupState] = useState(null);
+    const [deliveryState, setDeliveryState] = useState(null);
 
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://v2.jokeapi.dev/joke/Programming,Dark', true);
-    xhr.onload = function () {
-        if (xhr.status === 200) {
-            var randomJoke = JSON.parse(xhr.responseText);
-            console.log(randomJoke);
-            if (randomJoke.type === "single") {
-                // If type == "single", the joke only has the "joke" property
-                joke = randomJoke.joke;
-                console.log(joke);
-                setup = null;
-                delivery = null;
+    const fetchData = async () => {
+        try {
+            const response = await fetch('https://v2.jokeapi.dev/joke/Programming,Dark');
+            if (!response.ok) {
+                throw new Error('Request failed');
             }
-            else {
-                // If type == "single", the joke only has the "joke" property
-                setup = randomJoke.setup;
-                delivery = randomJoke.delivery;
-                console.log(setup);
-                console.log(delivery);
-                joke = null;
+
+            const randomJoke = await response.json();
+            if (randomJoke.type === 'single') {
+                setJokeState(randomJoke.joke);
+                setSetupState(null);
+                setDeliveryState(null);
+            } else {
+                setSetupState(randomJoke.setup);
+                setDeliveryState(randomJoke.delivery);
+                setJokeState(null);
             }
-        } else {
-            console.log('Request failed with status:', xhr.status);
+        } catch (error) {
+            console.error(error);
         }
     };
 
-    xhr.send();
+    useEffect(() => {
+        fetchData();
+    }, []);
 
     return (
         <div className="jokeAPI">
             <h2>JokeAPI</h2>
-            {joke != null && <p>{joke}</p>}
-            {setup != null && <p>{setup}</p>}
-            {delivery != null && <p>{delivery}</p>}
+            {jokeState && <p>{jokeState}</p>}
+            {setupState && deliveryState && (
+                <div>
+                    <p>{setupState}</p>
+                    <p>{deliveryState}</p>
+                </div>
+            )}
+            <button onClick={fetchData}>Get Joke</button>
         </div>
     );
 }
 
-
 export default JokeAPI;
+// import './JokeAPI.css';
+// import { useState } from 'react';
+// //for this section I used docs from the JokeAPI website, from the XMLHttpRequest docs linked on the Joke site
+// //I also used chatGPT as I was having some issues, it added the onload function which I was missing
+// //I now understand how it works and why it is needed
+
+// function JokeAPI() {
+
+//     const [jokeState, setJokeState] = useState(0);
+//     const [setupState, setSetupState] = useState(0);
+//     const [deliveryState, setDeliveryState] = useState(0);
+
+//     const changeJoke = () => {
+//         if (xhr.status === 200) {
+//             var randomJoke = JSON.parse(xhr.responseText);
+//             console.log(randomJoke);
+//             if (randomJoke.type === "single") {
+//                 // If type == "single", the joke only has the "joke" property
+//                 setJokeState(randomJoke.joke);
+//                 console.log(jokeState);
+//             } else {
+//                 // If type == "single", the joke only has the "joke" property
+//                 setSetupState(randomJoke.setup);
+//                 setDeliveryState(randomJoke.delivery);
+//                 console.log(setupState);
+//                 console.log(deliveryState);
+//             }
+//         } else {
+//             console.log('Request failed with status:', xhr.status);
+//         }
+//     }
+
+//     try {
+//         var xhr = new XMLHttpRequest();
+//         xhr.open('GET', 'https://v2.jokeapi.dev/joke/Programming,Dark', true);
+//         xhr.onload = function () {
+//             changeJoke();
+//         };
+
+//         xhr.send();
+//     } catch (err) {
+//         console.log(err);
+//     }
+
+//     return (
+//         <div className="jokeAPI">
+//             <h2>JokeAPI</h2>
+//             {jokeState ? <p>{jokeState}</p> : null}
+//             {setupState ? <p>{setupState}</p> : null}
+//             {deliveryState ? <p>{deliveryState}</p> : null}
+//         </div>
+//     );
+// }
+
+// export default JokeAPI;

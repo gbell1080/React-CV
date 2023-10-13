@@ -27,9 +27,7 @@ function Dashboard() {
                     title="A bit about me"
                     paragraph="Hi, I'm George. I'm 22 years old and an aspiring front end web developer. This has been a passion of mine for a few years now but programming itself has always been an interest of mine since I was a child. Hopefully while I progress, I can turn this page into a place where I can show off some of my developed skills and also try some new things. I'm learning to use github properly at the moment too so I will try experimental things on a seperate branch to ensure I don't completely break this website and lose all progress." />
                 <ActiveCard
-                    title="Completion of this site"
-                    content={<ProgressCircle
-                        percentage={0.8} />} />
+                    title="Completion of this site" />
                 <ActiveCard
                     title="not sure what to put here" />
                 <InfoCard

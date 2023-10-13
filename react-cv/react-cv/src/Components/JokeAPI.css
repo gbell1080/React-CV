@@ -1,3 +1,31 @@
+.jokeAPI {
+    margin: 0 auto;
+    width: 75%;
+    padding: 1rem;
+    border: 1px solid #479DCC;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #479DCC;
+    margin-bottom: 2rem;
+    overflow: auto;
+}
+
+.jokeAPI button {
+    margin: 0 auto;
+    display: block;
+    padding: 0.5rem;
+    border: 1px solid #479DCC;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px #479DCC;
+    margin-bottom: 2rem;
+    overflow: auto;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #479DCC;
+    transition: all 0.3s ease-in-out;
+}
+
 .jokeAPI h2 {
     font-size: 200%;
     color: #479DCC;
