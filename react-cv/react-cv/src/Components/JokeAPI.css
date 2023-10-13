@@ -1,0 +1,10 @@
+.jokeAPI h2 {
+    font-size: 200%;
+    color: #479DCC;
+    text-align: center;
+}
+
+.jokeAPI p {
+    text-align: center;
+    font-size: 1.5rem;
+}

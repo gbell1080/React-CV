@@ -17,7 +17,7 @@ function Dashboard() {
                     content={<ProgressCircle
                         percentage={0.8} />} />
                 <ActiveCard
-                    title="not sure what to put here"
+                    title="JokeAPI integration"
                     content={<JokeAPI />} />
                 <InfoCard
                     title={"Education Section"}
