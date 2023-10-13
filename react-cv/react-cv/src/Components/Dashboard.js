@@ -2,6 +2,7 @@ import './Dashboard.css';
 import InfoCard from './InfoCard';
 import ActiveCard from './ActiveCard';
 import ProgressCircle from './ProgressCircle';
+import JokeAPI from './JokeAPI';
 
 function Dashboard() {
     return (
@@ -16,7 +17,8 @@ function Dashboard() {
                     content={<ProgressCircle
                         percentage={0.8} />} />
                 <ActiveCard
-                    title="not sure what to put here" />
+                    title="not sure what to put here"
+                    content={<JokeAPI />} />
                 <InfoCard
                     title={"Education Section"}
                     bullets={[<li>Geography: 7</li>, <li>Maths: 9</li>, <li>Further Maths: 9</li>]}
