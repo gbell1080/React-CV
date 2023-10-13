@@ -3,14 +3,12 @@ let circleColor = '';
 let progressPrecentage = null;
 function ProgressCircle({ percentage }) {
     progressPrecentage = percentage;
-    {
-        if (percentage > 0.7) {
-            circleColor = "#56FF6A";
-        } else if (percentage > 0.4) {
-            circleColor = "#CCBF6E";
-        } else {
-            circleColor = "#CC5C4D";
-        }
+    if (percentage > 0.7) {
+        circleColor = "#56FF6A";
+    } else if (percentage > 0.4) {
+        circleColor = "#CCBF6E";
+    } else {
+        circleColor = "#CC5C4D";
     }
     return (
         <div className="ProgressCircleContainer">
