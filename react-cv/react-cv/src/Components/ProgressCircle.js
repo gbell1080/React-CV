@@ -1,17 +1,29 @@
 import "./ProgressCircle.css"
-
-function ProgressCircle() {
+let circleColor = '';
+let progressPrecentage = null;
+function ProgressCircle({ percentage }) {
+    progressPrecentage = percentage;
+    {
+        if (percentage > 0.7) {
+            circleColor = "#56FF6A";
+        } else if (percentage > 0.4) {
+            circleColor = "#CCBF6E";
+        } else {
+            circleColor = "#CC5C4D";
+        }
+    }
     return (
-        <div Classname="ProgressCircleContainer">
-            <div Classname="Progresss">
+        <div className="ProgressCircleContainer">
+            <div className="Progresss">
+                {/* used docs to figure out conditional rendering, Alex would be proud */}
                 <svg>
-                    <circle cx="38" cy="38" r="36"></circle>
+                    <circle cx="148" cy="148" r="144" style={{ stroke: circleColor, 'stroke-dasharray': 904 * progressPrecentage + ' 904' }}></circle>
                 </svg>
-                <div Classname="percentage">
-                    <p>+81%</p>
+                <div className="Percentage">
+                    <p>{percentage * 100 + '%'}</p>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

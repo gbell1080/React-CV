@@ -1,31 +1,46 @@
 .ProgressCircleContainer {
-    background-color: #E5E5E5;
-    width: 180px;
-    height: 180px;
+    /* position: relative;
+    left: 100px; */
+    width: 360px;
+    height: 360px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Progresss {
     background-color: #E5E5E5;
-    position: relative;
-    width: 92px;
-    height: 92px;
+    width: 328px;
+    height: 328px;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
 }
 
+.Percentage {
+    color: #45CC55;
+    font-size: 1.5rem;
+    position: relative;
+    top: -178px;
+    left: 140px;
+}
+
 svg {
-    width: 7rem;
-    height: 7rem;
+    width: 330px;
+    height: 330px;
 }
 
 svg circle {
     fill: none;
-    stroke-width: 10;
+    stroke-width: 30;
     stroke-linecap: round;
-    transform: translate(5px, 5px);
+    transform: translate(16px, 16px);
     stroke: #56FF6A;
-    stroke-dashoffset: -31;
-    stroke-dasharray: 200;
+    /* the stoke dash array will be calculated as a percentage of the total stoke units
+    this is calculated by 2*pi*r r being the radius of the circle.
+    this system will break when the percentage is lower than 50% so need to find a better
+    solution */
+    stroke-dasharray: calc(904*0.81);
+    transition: color 3s ease;
+    transition: stroke-dasharray 3s ease;
 }
