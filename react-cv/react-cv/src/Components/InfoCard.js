@@ -1,12 +1,14 @@
 import './InfoCard.css';
+import { FaBars } from 'react-icons/fa';
 
 function InfoCard({ paragraph, title, bullets }) {
 
     return (
         <div className='InfoCard'>
             <h2>{title}</h2>
-            <p>{paragraph}</p>
-            {bullets ? <ul>{bullets}</ul> : null}
+            {paragraph && <p>{paragraph}</p>}
+            {paragraph && <br />}
+            {bullets && <ul>{bullets}</ul>}
         </div>
     );
 }

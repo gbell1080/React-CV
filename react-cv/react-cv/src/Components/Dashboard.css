@@ -1,9 +1,11 @@
 .DashboardContainer {
+    /* position: relative;
+    top: 120px; */
     margin: 5px;
     padding-left: 0;
     display: block;
     flex-direction: row;
-    width: 83.3vw;
+    width: 80vw;
     height: auto;
     background-color: #FFFFFF;
     box-shadow: inset;

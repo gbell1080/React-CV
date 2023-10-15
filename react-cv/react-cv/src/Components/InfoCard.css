@@ -2,8 +2,8 @@
     margin: 15px;
     flex-grow: 4;
     min-width: 680px;
-    max-width: 955px;
-    height: 45vh;
+    max-width: 61%;
+    min-height: 45vh;
     background-color: #AAE0FF;
     display: block;
     justify-content: center;
@@ -11,7 +11,8 @@
 }
 
 .InfoCard h2 {
-    font-size: 200%;
+    margin: 5px;
+    font-size: 2rem;
     color: #479DCC;
     text-align: center;
 }
@@ -19,9 +20,13 @@
 .InfoCard p {
     text-align: center;
     font-size: 1.5rem;
+    line-height: 1.3rem;
+    letter-spacing: -5%;
+    word-spacing: -5%;
 }
 
 .InfoCard ul {
     margin-left: 50px;
     font-size: 1.5rem;
+    line-height: 1.4rem;
 }
