@@ -24,3 +24,27 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 768px) {
+    .DashboardContainer {
+        width: 99vw;
+        height: auto;
+        margin: auto;
+        padding: 0px;
+        justify-content: center;
+    }
+
+    .DashboardContainer h1 {
+        margin: 0px;
+        padding: 0px;
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .InfoCardContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

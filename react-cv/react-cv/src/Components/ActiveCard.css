@@ -17,3 +17,23 @@
     text-align: center;
     margin: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .ActiveCard {
+        margin: 10px;
+        height: 48vh;
+        min-width: 95%;
+        background-color: #AAE0FF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 7px;
+    }
+
+    .ActiveCard h2 {
+        font-size: 1.5rem;
+        color: #479DCC;
+        text-align: center;
+        margin: 10px;
+    }
+}

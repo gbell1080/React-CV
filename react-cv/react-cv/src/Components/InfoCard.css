@@ -30,3 +30,37 @@
     font-size: 1.5rem;
     line-height: 1.4rem;
 }
+
+@media screen and (max-width: 768px) {
+    .InfoCard {
+        margin: 10px;
+        min-width: 95%;
+        min-height: 45vh;
+        background-color: #AAE0FF;
+        display: block;
+        justify-content: center;
+        border-radius: 7px;
+    }
+
+    .InfoCard h2 {
+        margin: 5px;
+        font-size: 1.5rem;
+        color: #479DCC;
+        text-align: center;
+    }
+
+    .InfoCard p {
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+        letter-spacing: -5%;
+        word-spacing: -5%;
+    }
+
+    .InfoCard ul {
+        margin-left: 30px;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+}
