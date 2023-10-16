@@ -1,5 +1,5 @@
 import './SideBar.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import SideBarLink from './SideBarLink';
 import { useState, useEffect } from 'react';
 

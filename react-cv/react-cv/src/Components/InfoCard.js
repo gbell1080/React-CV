@@ -1,5 +1,4 @@
 import './InfoCard.css';
-import { FaBars } from 'react-icons/fa';
 
 function InfoCard({ paragraph, title, bullets }) {
 
