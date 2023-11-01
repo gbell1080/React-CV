@@ -3,6 +3,7 @@ import InfoCard from './InfoCard';
 import ActiveCard from './ActiveCard';
 import ProgressCircle from './ProgressCircle';
 import JokeAPI from './JokeAPI';
+import iFrame from './iFrame';
 
 function Dashboard() {
     return (
@@ -42,7 +43,8 @@ function Dashboard() {
                     <li>Stocking up, responding to shouts from different areas of the store then going to the appropriate storeroom to retrieve the items required.</li>
                     ]} />
                 <ActiveCard
-                    title="IFrame of some of the JS games I have made" />
+                    title="IFrame of some of the JS games I have made"
+                    content={<iFrame />} />
                 <ActiveCard
                     title="IFrame of some of the JS games I have made" />
                 <InfoCard
