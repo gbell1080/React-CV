@@ -3,6 +3,26 @@ import { FaBars } from 'react-icons/fa';
 import SideBarLink from './SideBarLink';
 import { useState, useEffect } from 'react';
 
+let clicked = false;
+
+function dropdown() {
+    clicked = !clicked;
+    {
+        clicked && (
+
+            <> <div className='buttonClickedContainer'>
+                <SideBarLink title='A bit about me' />
+                <SideBarLink title='Education' />
+                <SideBarLink title='Employment' />
+                <SideBarLink title='Hobbies' />
+                <SideBarLink title='Maybe some iFrames' />
+            </div></>
+        )
+    }
+    console.log('clicked')
+}
+
+
 function SideBar() {
     const [showButton, setShowButton] = useState(false);
 
@@ -30,7 +50,7 @@ function SideBar() {
             )}
 
             {showButton && (
-                <button>
+                <button onClick={dropdown()}>
                     <FaBars className='cross-btn' />
                 </button>
             )}
